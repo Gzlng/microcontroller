@@ -11,5 +11,9 @@
     (monitor) mach create
     (machine-0)
 
-Командв создаст машину с именем "machine-0"
+*Команда создаст машину с именем "machine-0"*
+
+    (machine-0) peripherals
+**peripherals** показывает подключенные перефирийные устройства 
+
     
