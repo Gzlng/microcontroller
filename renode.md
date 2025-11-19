@@ -38,10 +38,15 @@
         # Создание машины (По умолчанию machine-0)
 
         machine LoadPlatformDescription @platforms/boards/stm32f4_discovery-kit.repl
+        # Загрузка готовой конфигурации микроконтроллера
 
-        # Здесь должен быть путь к файлу прошивки
         sysbus LoadELF "C:\working\data\renode\build\src\STM32F4Template.elf"
+         # Здесь должен быть путь к файлу прошивки
+
         # открытие терминала для отображения данных UART
         showAnalyzer sysbus.usart2
+
         # запуск симуляции
         start
+
+**Как итог в новом терминале у нас должно появиться сообщение "Hello World"**
