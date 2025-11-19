@@ -19,7 +19,7 @@
  Теперь переходим к сборке прошивки для микроконтроллера при помощи одного их готовых инструментов:
 
         git clone https://github.com/PhanCuong91/data.git
-        Клонирование репозитория с инструментом 
+        Клонирование репозитория с инструментом через терминал VSCODE
 
         cd data/renode
         Переход в подпапку /renode в /data
@@ -27,7 +27,7 @@
         Дальше следует запуск  build.bat
 
         После этого создается файл прошивки по пути
-        "...data\renode\build\src\STM32F4Template.elf"
+        "...data\renode\build\src\STM32F4Template.elf" (Папка внутри проекта)
 
         Теперь у нас есть готовый файл прошивки
 
@@ -40,8 +40,8 @@
         machine LoadPlatformDescription @platforms/boards/stm32f4_discovery-kit.repl
         # Загрузка готовой конфигурации микроконтроллера
 
-        sysbus LoadELF "C:\working\data\renode\build\src\STM32F4Template.elf"
-         # Здесь должен быть путь к файлу прошивки
+        sysbus LoadELF "C:...\data\renode\build\src\STM32F4Template.elf"
+         # Здесь должен быть путь к файлу прошивки (Как правило - папка проекта)
 
         # открытие терминала для отображения данных UART
         showAnalyzer sysbus.usart2
